@@ -356,13 +356,18 @@ body{
 @media only screen and (min-width: 1265px){
     //for Homepage
     .container{
-        height: 440px;
+        height: 420px;
+        background-image: url(../img/react.svg);
+        background-size: 600px 770px;
+        background-repeat: no-repeat;
+        background-position: right top;
         h1{
             font-size: 60px;
         }
         h3{
             font-size: 28px;
             line-height: 60px;
+            margin-bottom: 60px;
         }
         button{
             height: 54px;

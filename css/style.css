@@ -320,7 +320,11 @@ body {
 
 @media only screen and (min-width: 1265px) {
   .container {
-    height: 440px;
+    height: 420px;
+    background-image: url(../img/react.svg);
+    background-size: 600px 770px;
+    background-repeat: no-repeat;
+    background-position: right top;
   }
   .container h1 {
     font-size: 60px;
@@ -328,6 +332,7 @@ body {
   .container h3 {
     font-size: 28px;
     line-height: 60px;
+    margin-bottom: 60px;
   }
   .container button {
     height: 54px;
