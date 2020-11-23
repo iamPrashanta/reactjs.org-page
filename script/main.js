@@ -26,3 +26,10 @@ $('.sidenav ul li a').click(function () {
 $('.fa-bars').click(function () {
     alert('I am perfectly working (code was missing)');
 })
+
+$('.links svg').click(function () {
+    window.location.href = "http://google.com";
+})
+$('.links .fa-github').click(function () {
+    window.location.href = "https://github.com/iamPrashanta";
+})

@@ -14,14 +14,49 @@ body{
 
 /*Codes for Home page*/
 .container{
-    height: 500px;
-    margin-top: -30px;
-    position: relative;
-    z-index: -1;
+    height: 320px;
     background-color: rgb(40,44,52);
-    h2{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    h1{
+        font-size: 46px;
         margin: 0;
-        padding: 0;
+        padding-top: 60px;
+        color: var(--header-active-color);  
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 300;
+        color: #f3eaea;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        line-height: 28px;
+    }
+    button{
+        height: 38px;
+        width: 140px;
+        background-color: var(--header-active-color);
+        cursor: pointer;
+        transition: 0.3s;
+        border: none;
+        outline: none;
+        margin-right: 30px;
+        a{
+            text-decoration: none;
+            font-size: 15px;
+            color: #000208;
+            letter-spacing: 0.2px;
+        }
+    }
+    button:hover{
+        background-color: #f3eaea;
+        color: #000208;
+    }
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        color: var(--header-active-color);
     }
 }
 
@@ -88,7 +123,10 @@ body{
         }
         svg{
             fill: white;
-            margin-right: -10px;
+            cursor: pointer;
+        }
+        .fa-github{
+            display: none;
         }
     }
 }
@@ -135,6 +173,9 @@ body{
             display: none;
             font-weight: 400;
             width: fit-content;
+            :hover{
+                color: var(--page-color-gray);
+            }
             a{
                 text-decoration: none;
                 color: inherit;
@@ -161,9 +202,6 @@ body{
     }
 }
 
-.fa-bars{
-    display: none;
-}
 
 
 
@@ -209,34 +247,22 @@ body{
             max-width: 180px;
         }
     }
-    .fa-bars{
-        position: absolute;
-        display: block;
-        right: 0;
-        margin-right: 40px;
-        font-size: 30px;
-        margin-top: 9px;
-        cursor: pointer;
-    }
+
     .header{
         .panel{
-            display: none;
-            flex-direction: column;
-            margin: auto;
-            margin-left: 20%;
-            li{
-                font-size: 20px;
-                padding: 5px 0;
-            }
+           
         }
         .links{
+           li:nth-child(2){
+               display: none;
+           }
+           li:nth-child(3){
             display: none;
-            flex-direction: column;
-            position: relative;
-            margin: auto;
-            li{
-                font-size: 20px;
-                padding: 5px;
+            }
+            .fa-github{
+                display: block;
+                font-size: 24px;
+                padding-left: 16px;
             }
         }
     }
