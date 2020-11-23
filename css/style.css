@@ -94,9 +94,11 @@ body {
   position: absolute;
   left: 0;
   padding: 2px 0 0 40px;
+  cursor: pointer;
 }
 
 .header .panel {
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   padding: 15px 15px 15px 60px;
@@ -217,9 +219,50 @@ body {
 }
 
 /*Media Queries for Responsive web page*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 460px) {
+  .header .links {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .container {
+    height: 240px;
+  }
+  .container h1 {
+    font-size: 28px;
+  }
+  .container h3 {
+    font-size: 16px;
+    word-spacing: 0.5px;
+    letter-spacing: 0.4px;
+  }
   .sidenav {
     display: none;
+  }
+  .header .logo {
+    font-size: 16px;
+    margin-left: -30px;
+    cursor: pointer;
+  }
+  .header .logo img {
+    height: 20px;
+    width: 20px;
+    padding-left: 10px;
+  }
+  .header .panel {
+    font-size: 14px;
+    margin-left: -40px;
+  }
+  .header .panel li {
+    padding: 0 10px;
+  }
+  .header .links svg {
+    width: 60% !important;
+  }
+  .header .links .fa-github {
+    font-size: 20px !important;
+    margin-right: -20px;
   }
 }
 
@@ -229,6 +272,9 @@ body {
   }
   .sidenav li {
     max-width: 180px;
+  }
+  .header .links svg:hover {
+    fill: var(--header-active-color);
   }
   .header .links li:nth-child(2) {
     display: none;
@@ -240,6 +286,10 @@ body {
     display: block;
     font-size: 24px;
     padding-left: 16px;
+    cursor: pointer;
+  }
+  .header .links .fa-github:hover {
+    color: var(--header-active-color);
   }
 }
 

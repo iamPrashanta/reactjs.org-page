@@ -33,3 +33,6 @@ $('.links svg').click(function () {
 $('.links .fa-github').click(function () {
     window.location.href = "https://github.com/iamPrashanta";
 })
+$('.header .logo img').click(function () {
+    window.location.href = "../index.html";
+})
