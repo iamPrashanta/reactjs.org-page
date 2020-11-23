@@ -114,6 +114,7 @@ body {
 }
 
 .header .links {
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   padding: 15px;
@@ -314,5 +315,43 @@ body {
   }
   .sidenav ul li {
     font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 1265px) {
+  .container {
+    height: 440px;
+  }
+  .container h1 {
+    font-size: 60px;
+  }
+  .container h3 {
+    font-size: 28px;
+    line-height: 60px;
+  }
+  .container button {
+    height: 54px;
+  }
+  .container button a {
+    font-size: 19px;
+  }
+  .container a {
+    font-size: 19px;
+  }
+  .header .logo {
+    font-size: 21px;
+    padding-left: 10px;
+    padding-top: 16px;
+  }
+  .header .logo img {
+    height: 30px;
+    width: 30px;
+  }
+  .header .panel {
+    font-size: 18px;
+    padding: 20px 20px 20px 80px;
+  }
+  .header .links {
+    font-size: 18px;
   }
 }

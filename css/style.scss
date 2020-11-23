@@ -109,6 +109,7 @@ body{
     }
 
     .links{
+        font-size: 16px;
         display: flex;
         flex-direction: row;
         padding: 15px;
@@ -347,6 +348,49 @@ body{
             li{
                 font-size: 17px;
             }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1265px){
+    //for Homepage
+    .container{
+        height: 440px;
+        h1{
+            font-size: 60px;
+        }
+        h3{
+            font-size: 28px;
+            line-height: 60px;
+        }
+        button{
+            height: 54px;
+            a{
+                font-size: 19px;
+            }
+        }
+        a{
+            font-size: 19px;
+        }
+    }
+    //for Docs pages
+    .header{
+        .logo{
+            font-size: 21px;
+            padding-left: 10px;
+            padding-top: 16px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        }
+        .panel{
+            font-size: 18px;
+            padding: 20px 20px 20px 80px;
+        }
+        .links{
+            font-size: 18px;
         }
     }
 }
