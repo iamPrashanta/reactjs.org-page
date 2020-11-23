@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+:root{
+    --color-main-one: #20232A;
+    --header-active-color:#61DAFB;
+    --nav-active-color:#000208;
+    --page-color-gray: #836D6D;
+}
+
+
+
+/*Codes for Home page*/
+.container{
+    height: 500px;
+    margin-top: -30px;
+    position: relative;
+    z-index: -1;
+    background-color: rgb(40,44,52);
+    h2{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+/*Codes for Docs pages*/
+.header{
+    background-color: var(--color-main-one);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    padding: 0 100px 0 70px;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .logo{
+        padding: 11px 5px 13px 0;
+        font-size: 20px;
+        color: var(--header-active-color);
+        font-weight: bold;
+        img{
+            height: 26px;
+            width: 26px;
+            position: absolute;
+            left: 0;
+            padding: 2px 0 0 40px;
+        }
+    }
+
+    .panel{
+        display: flex;
+        flex-direction: row;
+        padding: 15px 15px 15px 60px;
+        :hover{
+            color: var(--header-active-color);
+        }
+        li{
+            list-style: none;
+            padding: 0 15px;
+        }
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        position: absolute;
+        right: 0;
+        padding-right: 60px;
+        li{
+            list-style: none;
+            padding: 0 15px;
+            i{
+                font-size: 15px;
+                padding: 5px;
+            } 
+        }
+        svg{
+            fill: white;
+            margin-right: -10px;
+        }
+    }
+}
+
+
+.sidenav{
+    background-color: #F7F7F7;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    width: 280px;
+    height: auto;
+    min-height: 100vh;
+    border-right: 1px solid #e4e3e3;
+    padding-top: 40px;
+
+    ul{
+        text-transform: uppercase;
+        color: var(--page-color-gray);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.12px;
+        line-height: 42px;
+        cursor: pointer;
+        transition: 0.2s;
+        width: max-content;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        i{
+            font-size: 16px;
+            padding-left: 5px;
+        }
+
+        li{
+            text-transform: capitalize;
+            list-style: none;
+            font-size: 15px;
+            line-height: 27px;
+            color: #292525 !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            display: none;
+            font-weight: 400;
+            width: fit-content;
+            a{
+                text-decoration: none;
+                color: inherit;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .active-content{
+        color: var(--color-main-one);
+        li{
+            display: block;
+            color: var(--page-color-gray);
+        }
+        i{
+            transform: rotate(180deg);
+            margin-left: 5px;
+        }
+    }
+    .active-item{
+        color: var(--nav-active-color) !important;
+        font-weight: 600;
+        border-left: 5px solid var(--header-active-color);
+    }
+}
+
+.fa-bars{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Queries for Responsive web page*/
+@media only screen and (max-width: 600px){
+    .sidenav{
+        display: none;
+    }
+}
+@media only screen and (max-width: 850px){
+    .sidenav{
+        width: 230px;
+        li{
+            max-width: 180px;
+        }
+    }
+    .fa-bars{
+        position: absolute;
+        display: block;
+        right: 0;
+        margin-right: 40px;
+        font-size: 30px;
+        margin-top: 9px;
+        cursor: pointer;
+    }
+    .header{
+        .panel{
+            display: none;
+            flex-direction: column;
+            margin: auto;
+            margin-left: 20%;
+            li{
+                font-size: 20px;
+                padding: 5px 0;
+            }
+        }
+        .links{
+            display: none;
+            flex-direction: column;
+            position: relative;
+            margin: auto;
+            li{
+                font-size: 20px;
+                padding: 5px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1080px) and (min-width: 850px){
+    .sidenav{
+        ul{
+            li{
+                max-width: 230px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1080px){
+    .header{
+        font-size: 17px;
+        .logo{
+            font-size: 22px;
+        }
+    }
+    .sidenav{
+        width: 340px;
+        ul{
+            font-size: 16px;
+            li{
+                font-size: 17px;
+            }
+        }
+    }
+}
